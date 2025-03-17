@@ -30,16 +30,16 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/erobertsCNA/ASDProject2025TeamPurple">
+    <img src="images/logo.avif" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">Community Resource Directory</h3>
 
   <p align="center">
-    project_description
+    The **Community Resource Directory** is a web application designed for municipal websites.
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/erobertsCNA/ASDProject2025TeamPurple/tree/main/CP3540Winter2025-code/myapp"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/github_username/repo_name">View Demo</a>
@@ -227,12 +227,12 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
+[contributors-shield]: https://img.shields.io/github/contributors/erobertsCNA/ASDProject2025TeamPurple.svg?style=for-the-badge
+[contributors-url]: https://github.com/erobertsCNA/ASDProject2025TeamPurple/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/erobertsCNA/ASDProject2025TeamPurple.svg?style=for-the-badge
+[forks-url]: https://github.com/erobertsCNA/ASDProject2025TeamPurple/network/members
+[stars-shield]: https://img.shields.io/github/stars/erobertsCNA/ASDProject2025TeamPurple.svg?style=for-the-badge
+[stars-url]: https://github.com/erobertsCNA/ASDProject2025TeamPurple/stargazers
 [issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
 [issues-url]: https://github.com/github_username/repo_name/issues
 [license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
