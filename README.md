@@ -42,11 +42,11 @@
     <a href="https://github.com/erobertsCNA/ASDProject2025TeamPurple/tree/main/CP3540Winter2025-code/myapp"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://github.com/erobertsCNA/ASDProject2025TeamPurple">View Demo</a>
     &middot;
-    <a href="https://github.com/github_username/repo_name/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    <a href="https://github.com/erobertsCNA/ASDProject2025TeamPurple/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     &middot;
-    <a href="https://github.com/github_username/repo_name/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    <a href="https://github.com/erobertsCNA/ASDProject2025TeamPurple/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
 </div>
 
@@ -85,12 +85,12 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started. To avoid retyping too much info, do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`, `project_license`
+<!-- **FILLandREPLACE Here's a blank template to get started. To avoid retyping too much info, do a search and replace with your text editor for the following: `erobertsCNA`, `ASDProject2025TeamPurple`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `Community Resource Directory`, `The **Community Resource Directory** is a web application designed for municipal websites.`, `project_license` -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
+<!-- TTD replace correct technology - url for badges  https://img.shields.io/badge-->
 ### Built With
 
 * [![Next][Next.js]][Next-url]
@@ -105,7 +105,7 @@ Here's a blank template to get started. To avoid retyping too much info, do a se
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
+<!-- TTD replace proper installation instructions from design document -->
 <!-- GETTING STARTED -->
 ## Getting Started
 
@@ -125,7 +125,7 @@ This is an example of how to list things you need to use the software and how to
 1. Get a free API Key at [https://example.com](https://example.com)
 2. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/erobertsCNA/ASDProject2025TeamPurple.git
    ```
 3. Install NPM packages
    ```sh
@@ -137,14 +137,14 @@ This is an example of how to list things you need to use the software and how to
    ```
 5. Change git remote url to avoid accidental pushes to base project
    ```sh
-   git remote set-url origin github_username/repo_name
+   git remote set-url origin erobertsCNA/ASDProject2025TeamPurple
    git remote -v # confirm the changes
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
+<!-- TTD Fill in when examples exist -->
 <!-- USAGE EXAMPLES -->
 ## Usage
 
@@ -155,7 +155,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
+<!-- TTD  -->
 <!-- ROADMAP -->
 ## Roadmap
 
@@ -164,12 +164,12 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [ ] Feature 3
     - [ ] Nested Feature
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/erobertsCNA/ASDProject2025TeamPurple/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
+<!-- Rework to allow contributors but be clear its for a class project but we will examine any submissions we receive -->
 <!-- CONTRIBUTING -->
 ## Contributing
 
@@ -188,8 +188,8 @@ Don't forget to give the project a star! Thanks again!
 
 ### Top contributors:
 
-<a href="https://github.com/github_username/repo_name/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=github_username/repo_name" alt="contrib.rocks image" />
+<a href="https://github.com/erobertsCNA/ASDProject2025TeamPurple/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=erobertsCNA/ASDProject2025TeamPurple" alt="contrib.rocks image" />
 </a>
 
 
@@ -208,7 +208,7 @@ Distributed under the project_license. See `LICENSE.txt` for more information.
 
 Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/erobertsCNA/ASDProject2025TeamPurple](https://github.com/erobertsCNA/ASDProject2025TeamPurple)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -225,6 +225,7 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 
 
 
+
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/erobertsCNA/ASDProject2025TeamPurple.svg?style=for-the-badge
@@ -233,13 +234,13 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [forks-url]: https://github.com/erobertsCNA/ASDProject2025TeamPurple/network/members
 [stars-shield]: https://img.shields.io/github/stars/erobertsCNA/ASDProject2025TeamPurple.svg?style=for-the-badge
 [stars-url]: https://github.com/erobertsCNA/ASDProject2025TeamPurple/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
+[issues-shield]: https://img.shields.io/github/issues/erobertsCNA/ASDProject2025TeamPurple.svg?style=for-the-badge
+[issues-url]: https://github.com/erobertsCNA/ASDProject2025TeamPurple/issues
+[license-shield]: https://img.shields.io/github/license/erobertsCNA/ASDProject2025TeamPurple.svg?style=for-the-badge
+[license-url]: https://github.com/erobertsCNA/ASDProject2025TeamPurple/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: images/project-logo.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
