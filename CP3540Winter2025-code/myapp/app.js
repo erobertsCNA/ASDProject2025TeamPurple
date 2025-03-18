@@ -1,8 +1,11 @@
+require('dotenv').config(); // Load environment variables
+
 const express = require('express')
 const mongoose = require('mongoose');
 const courseRoute = require ("./routers/course.router.js");
 const app = express()
-const port = 3000
+// const port = 3000
+const port = process.env.PORT || 3000;
 // With cors, may use port 5000 for backend and 3000 for front end, in future. March 13th, 2025
 
 const cors = require('cors');
@@ -24,7 +27,8 @@ app.get('/username', (req, res) => {
     res.send('<h1>Hello Paul!<\h1>')
 })
 
-mongoose.connect('mongodb+srv://Student00:pass6454@home00.vrq4z.mongodb.net/?retryWrites=true&w=majority&appName=home00', { dbName: 'home00' })
+// mongoose.connect('mongodb+srv://Student00:pass6454@home00.vrq4z.mongodb.net/?retryWrites=true&w=majority&appName=home00', { dbName: 'home00' })
+mongoose.connect(process.env.MONGO_URI, { dbName: process.env.DB_NAME })
     .then(() => {
         console.log("Connected to the database!");
         app.listen(port, () => {

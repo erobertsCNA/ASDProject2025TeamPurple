@@ -81,26 +81,29 @@
 
 
 <!-- ABOUT THE PROJECT -->
+<div align="center">
+
 ## About The Project
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
-
+</div>
 <!-- **FILLandREPLACE Here's a blank template to get started. To avoid retyping too much info, do a search and replace with your text editor for the following: `erobertsCNA`, `ASDProject2025TeamPurple`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `Community Resource Directory`, `The **Community Resource Directory** is a web application designed for municipal websites.`, `project_license` -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-<!-- TTD replace correct technology - url for badges  https://img.shields.io/badge-->
 ### Built With
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+
+* [![HTML5][HTML5-badge]][HTML5-url]
+* [![CSS3][CSS3-badge]][CSS3-url]
+* [![JavaScript][JavaScript-badge]][JavaScript-url]
+* [![Node.js][Node.js-badge]][Node.js-url]
+* [![Express.js][Express.js-badge]][Express.js-url]
+* [![PostgreSQL][PostgreSQL-badge]][PostgreSQL-url]
+* [![MongoDB][MongoDB-badge]][MongoDB-url]
+* [![JWT][JWT-badge]][JWT-url]
+* [![bcrypt][bcrypt-badge]][bcrypt-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -256,4 +259,23 @@ Project Link: [https://github.com/erobertsCNA/ASDProject2025TeamPurple](https://
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
+[JQuery-url]: https://jquery.com
+
+[HTML5-badge]: https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white
+[HTML5-url]: https://developer.mozilla.org/en-US/docs/Web/HTML
+[CSS3-badge]: https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white
+[CSS3-url]: https://developer.mozilla.org/en-US/docs/Web/CSS
+[JavaScript-badge]: https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
+[JavaScript-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+[Node.js-badge]: https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white
+[Node.js-url]: https://nodejs.org/
+[Express.js-badge]: https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white
+[Express.js-url]: https://expressjs.com/
+[PostgreSQL-badge]: https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white
+[PostgreSQL-url]: https://www.postgresql.org/
+[MongoDB-badge]: https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white
+[MongoDB-url]: https://www.mongodb.com/
+[JWT-badge]: https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white
+[JWT-url]: https://jwt.io/
+[bcrypt-badge]: https://img.shields.io/badge/bcrypt-4A90E2?style=for-the-badge
+[bcrypt-url]: https://www.npmjs.com/package/bcrypt
