@@ -27,7 +27,6 @@ app.get('/username', (req, res) => {
     res.send('<h1>Hello Paul!<\h1>')
 })
 
-// mongoose.connect('mongodb+srv://Student00:pass6454@home00.vrq4z.mongodb.net/?retryWrites=true&w=majority&appName=home00', { dbName: 'home00' })
 mongoose.connect(process.env.MONGO_URI, { dbName: process.env.DB_NAME })
     .then(() => {
         console.log("Connected to the database!");

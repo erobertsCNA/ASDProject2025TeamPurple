@@ -22,8 +22,8 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![project_license][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
+[![project_license][license-shield]][license-url]
 
 
 
@@ -111,38 +111,55 @@
 <!-- TTD replace proper installation instructions from design document -->
 <!-- GETTING STARTED -->
 ## Getting Started
+While our instructions explain how to launch the app on your local machine, we do assume the following is installed and functioning.
+1. **Github**. 
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+The ability to clone (or fork) this repository.
+2. **IDE**. 
 
-### Prerequisites
+Any IDE is fine but we use IntelliJ.
+3. **Node.js**. 
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+This can be installed from https://nodejs.org/
+Below are the instructions to set up the app on your local machine.
 
-### Installation
+## Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+Below are the instructions to deploy this app on your local machine. They differ by operating system,
+so please be cognisant of this when you follow the installation instructions.
+
+### Windows Users:
+
+#### 1. Clone the Repository
+
+**Option A. command line:**
    ```sh
    git clone https://github.com/erobertsCNA/ASDProject2025TeamPurple.git
    ```
-3. Install NPM packages
+OR
+
+**Option B. Github website and desktop:**
+
+Use the **Github** website and desktop app to clone repository.
+
+#### 2. Navigate to the directory.
+
+Once the project is on your local computer, you must navigate from the root directory into the myapp folder via Command Prompt (CMD) in your IDE.
    ```sh
-   npm install
+   cd CP3540Winter2025-code/myapp
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+#### 3. Set up and install the Environment.
+
+In your CMD terminal in your IDE, run the following:
    ```
-5. Change git remote url to avoid accidental pushes to base project
-   ```sh
-   git remote set-url origin erobertsCNA/ASDProject2025TeamPurple
-   git remote -v # confirm the changes
+   setup.bat
    ```
+Setup will check requirements so far and will install environment variables. It also concludes with instructions
+on the different methods of launching the app (eg. dev, user, test).
+
+### Mac/Linux Users:
+
+setup.sh and associated files are still being set up and tested. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -261,6 +278,7 @@ Project Link: [https://github.com/erobertsCNA/ASDProject2025TeamPurple](https://
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com
 
+// I (Evan) added the below. Remove repeats from above list and reduce list.
 [HTML5-badge]: https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white
 [HTML5-url]: https://developer.mozilla.org/en-US/docs/Web/HTML
 [CSS3-badge]: https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white
