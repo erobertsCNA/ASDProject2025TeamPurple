@@ -22,8 +22,8 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![project_license][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
+[![project_license][license-shield]][license-url]
 
 
 
@@ -42,11 +42,11 @@
     <a href="https://github.com/erobertsCNA/ASDProject2025TeamPurple/tree/main/CP3540Winter2025-code/myapp"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://github.com/erobertsCNA/ASDProject2025TeamPurple">View Demo</a>
     &middot;
-    <a href="https://github.com/github_username/repo_name/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    <a href="https://github.com/erobertsCNA/ASDProject2025TeamPurple/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     &middot;
-    <a href="https://github.com/github_username/repo_name/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    <a href="https://github.com/erobertsCNA/ASDProject2025TeamPurple/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
 </div>
 
@@ -81,70 +81,90 @@
 
 
 <!-- ABOUT THE PROJECT -->
+<div align="center">
+
 ## About The Project
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started. To avoid retyping too much info, do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`, `project_license`
+</div>
+<!-- **FILLandREPLACE Here's a blank template to get started. To avoid retyping too much info, do a search and replace with your text editor for the following: `erobertsCNA`, `ASDProject2025TeamPurple`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `Community Resource Directory`, `The **Community Resource Directory** is a web application designed for municipal websites.`, `project_license` -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 ### Built With
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+
+* [![HTML5][HTML5-badge]][HTML5-url]
+* [![CSS3][CSS3-badge]][CSS3-url]
+* [![JavaScript][JavaScript-badge]][JavaScript-url]
+* [![Node.js][Node.js-badge]][Node.js-url]
+* [![Express.js][Express.js-badge]][Express.js-url]
+* [![PostgreSQL][PostgreSQL-badge]][PostgreSQL-url]
+* [![MongoDB][MongoDB-badge]][MongoDB-url]
+* [![JWT][JWT-badge]][JWT-url]
+* [![bcrypt][bcrypt-badge]][bcrypt-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
+<!-- TTD replace proper installation instructions from design document -->
 <!-- GETTING STARTED -->
 ## Getting Started
+While our instructions explain how to launch the app on your local machine, we do assume the following is installed and functioning.
+1. **Github**. 
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+The ability to clone (or fork) this repository.
+2. **IDE**. 
 
-### Prerequisites
+Any IDE is fine but we use IntelliJ.
+3. **Node.js**. 
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+This can be installed from https://nodejs.org/
+Below are the instructions to set up the app on your local machine.
 
-### Installation
+## Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+Below are the instructions to deploy this app on your local machine. They differ by operating system,
+so please be cognisant of this when you follow the installation instructions.
+
+### Windows Users:
+
+#### 1. Clone the Repository
+
+**Option A. command line:**
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/erobertsCNA/ASDProject2025TeamPurple.git
    ```
-3. Install NPM packages
+OR
+
+**Option B. Github website and desktop:**
+
+Use the **Github** website and desktop app to clone repository.
+
+#### 2. Navigate to the directory.
+
+Once the project is on your local computer, you must navigate from the root directory into the myapp folder via Command Prompt (CMD) in your IDE.
    ```sh
-   npm install
+   cd CP3540Winter2025-code/myapp
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+#### 3. Set up and install the Environment.
+
+In your CMD terminal in your IDE, run the following:
    ```
-5. Change git remote url to avoid accidental pushes to base project
-   ```sh
-   git remote set-url origin github_username/repo_name
-   git remote -v # confirm the changes
+   setup.bat
    ```
+Setup will check requirements so far and will install environment variables. It also concludes with instructions
+on the different methods of launching the app (eg. dev, user, test).
+
+### Mac/Linux Users:
+
+setup.sh and associated files are still being set up and tested. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
+<!-- TTD Fill in when examples exist -->
 <!-- USAGE EXAMPLES -->
 ## Usage
 
@@ -155,7 +175,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
+<!-- TTD  -->
 <!-- ROADMAP -->
 ## Roadmap
 
@@ -164,12 +184,12 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [ ] Feature 3
     - [ ] Nested Feature
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/erobertsCNA/ASDProject2025TeamPurple/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
+<!-- Rework to allow contributors but be clear its for a class project but we will examine any submissions we receive -->
 <!-- CONTRIBUTING -->
 ## Contributing
 
@@ -188,8 +208,8 @@ Don't forget to give the project a star! Thanks again!
 
 ### Top contributors:
 
-<a href="https://github.com/github_username/repo_name/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=github_username/repo_name" alt="contrib.rocks image" />
+<a href="https://github.com/erobertsCNA/ASDProject2025TeamPurple/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=erobertsCNA/ASDProject2025TeamPurple" alt="contrib.rocks image" />
 </a>
 
 
@@ -208,7 +228,7 @@ Distributed under the project_license. See `LICENSE.txt` for more information.
 
 Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/erobertsCNA/ASDProject2025TeamPurple](https://github.com/erobertsCNA/ASDProject2025TeamPurple)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -225,6 +245,7 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 
 
 
+
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/erobertsCNA/ASDProject2025TeamPurple.svg?style=for-the-badge
@@ -233,13 +254,13 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [forks-url]: https://github.com/erobertsCNA/ASDProject2025TeamPurple/network/members
 [stars-shield]: https://img.shields.io/github/stars/erobertsCNA/ASDProject2025TeamPurple.svg?style=for-the-badge
 [stars-url]: https://github.com/erobertsCNA/ASDProject2025TeamPurple/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
+[issues-shield]: https://img.shields.io/github/issues/erobertsCNA/ASDProject2025TeamPurple.svg?style=for-the-badge
+[issues-url]: https://github.com/erobertsCNA/ASDProject2025TeamPurple/issues
+[license-shield]: https://img.shields.io/github/license/erobertsCNA/ASDProject2025TeamPurple.svg?style=for-the-badge
+[license-url]: https://github.com/erobertsCNA/ASDProject2025TeamPurple/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: images/project-logo.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
@@ -255,4 +276,24 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
+[JQuery-url]: https://jquery.com
+
+<!-- I (Evan) added the below. Remove repeats from above list and reduce list. -->
+[HTML5-badge]: https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white
+[HTML5-url]: https://developer.mozilla.org/en-US/docs/Web/HTML
+[CSS3-badge]: https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white
+[CSS3-url]: https://developer.mozilla.org/en-US/docs/Web/CSS
+[JavaScript-badge]: https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
+[JavaScript-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+[Node.js-badge]: https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white
+[Node.js-url]: https://nodejs.org/
+[Express.js-badge]: https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white
+[Express.js-url]: https://expressjs.com/
+[PostgreSQL-badge]: https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white
+[PostgreSQL-url]: https://www.postgresql.org/
+[MongoDB-badge]: https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white
+[MongoDB-url]: https://www.mongodb.com/
+[JWT-badge]: https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white
+[JWT-url]: https://jwt.io/
+[bcrypt-badge]: https://img.shields.io/badge/bcrypt-4A90E2?style=for-the-badge
+[bcrypt-url]: https://www.npmjs.com/package/bcrypt
