@@ -278,7 +278,7 @@ Project Link: [https://github.com/erobertsCNA/ASDProject2025TeamPurple](https://
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com
 
-// I (Evan) added the below. Remove repeats from above list and reduce list.
+<!-- I (Evan) added the below. Remove repeats from above list and reduce list. -->
 [HTML5-badge]: https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white
 [HTML5-url]: https://developer.mozilla.org/en-US/docs/Web/HTML
 [CSS3-badge]: https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white
