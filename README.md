@@ -25,7 +25,10 @@
   [![Forks][forks-shield]][forks-url]
   [![Stargazers][stars-shield]][stars-url]
   [![Issues][issues-shield]][issues-url]
-  [![LinkedIn-Evan][linkedin-shield-Evan]][linkedin-url-Evan]
+  [![LinkedIn](https://img.shields.io/badge/Evan-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/evan-roberts-940656181/)
+  [![LinkedIn](https://img.shields.io/badge/Nick-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/nick-wall-7a9a23211)
+  <!-- [![LinkedIn](https://img.shields.io/badge/Ral-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/evan-profile)
+  [![LinkedIn](https://img.shields.io/badge/Marcus-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/evan-profile) -->
 
 </div>
 
