@@ -81,8 +81,11 @@
       </ul>
       <li><a href="#installation">Installation</a></li>
       <ul>
+        <li><a href="#all-users">All Users</a></li>
+        <ul>
         <li><a href="#windows-users">Windows Users</a></li>
-        <li><a href="#mac-or-linux-users">Mac/Linux Users</a></li>
+        <li><a href="#mac-or-linux-users">Mac or Linux Users</a></li>
+        </ul>
       </ul>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#use-cases">Use Cases</a></li>
@@ -94,6 +97,7 @@
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#license">License</a></li>
   </ol>
 </details>
 
@@ -151,12 +155,13 @@ so please be cognisant of this when you follow the installation instructions.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Windows Users:
+## All Users:
 
 #### 1. Clone the Repository
 
 **Option A. command line:**
-   ```sh
+
+   ```bash
    git clone https://github.com/erobertsCNA/ASDProject2025TeamPurple.git
    ```
 OR
@@ -173,7 +178,10 @@ Once the project is on your local computer, you must navigate from the root dire
    ```
 #### 3. Set up and install the Environment.
 
-In your CMD terminal in your IDE, run the following:
+This will depend on your operating system. See instructions for Windows Users and Mac/Linux users below
+
+## Windows Users
+In your CMD terminal, run the following:
    ```
    setup.bat
    ```
@@ -182,9 +190,18 @@ on the different methods of launching the app (eg. dev, user, test).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Mac or Linux Users:
+## Mac or Linux Users:
 
-setup.sh and associated files are still being set up and tested. 
+In your terminal, run the following:
+
+   ```
+   chmod +x setup.sh && ./setup.sh
+
+   ```
+
+
+Setup will check requirements so far and will install environment variables. It also concludes with instructions
+on the different methods of launching the app (eg. dev, user, test).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -268,6 +285,10 @@ Project Link: [ASDProject2025TeamPurple](https://github.com/erobertsCNA/ASDProje
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+## License
+
+This project is licensed under the Apache License 2.0. You can view the full text of the license in the [LICENSE](./LICENSE) file located at the root of this repository.
 
 
 

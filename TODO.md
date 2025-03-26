@@ -10,8 +10,15 @@ This is more so a construction zone for our contributors. This can be a common p
 
 - [ ] Complete `README.md`
   - [ ] Update Usage screenshots and images
-  - [ ] Add installation script for Mac/Linux
-  - [ ] Replace Roadmap with Use Cases
+  - [x] Add installation script for Mac/Linux
+  - [ ] Test setup.sh 
+  - [ ] Confirm and write installation instructions
+  - [x] Replace Roadmap with Use Cases
+  - [ ] Fill in Use Cases
+    - [ ] Use Case 1
+    - [ ] Use Case 2
+    - [ ] Use Case 3
+  - [x] Create LICENSE
 - [ ] Research next steps to bring functionality up to date with Paul's code.
 - [ ] Individualize (reference architecture documents)
 
