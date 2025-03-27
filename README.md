@@ -157,18 +157,29 @@ so please be cognisant of this when you follow the installation instructions.
 
 ## All Users:
 
+<br>
+
 #### 1. Clone the Repository
+
+<br>
 
 **Option A. command line:**
 
    ```bash
    git clone https://github.com/erobertsCNA/ASDProject2025TeamPurple.git
    ```
+
+<br>
+
 OR
+
+<br>
 
 **Option B. Github website and desktop:**
 
 Use the **Github** website and desktop app to clone repository.
+
+<br>
 
 #### 2. Navigate to the directory.
 
@@ -176,17 +187,23 @@ Once the project is on your local computer, you must navigate from the root dire
    ```sh
    cd CP3540Winter2025-code/myapp
    ```
+<br>
+
 #### 3. Set up and install the Environment.
 
-This will depend on your operating system. See instructions for Windows Users and Mac/Linux users below
+Setup will:
+
+- check requirements so far and will install environment variables,
+- asks for Database specifics (DBURL, DBNAME, and PORT),
+- and concludes with instructions on the different methods of launching the app (eg. dev, user, test).
+
+See instructions for Windows Users and Mac/Linux users below
 
 ## Windows Users
 In your CMD terminal, run the following:
    ```
    setup.bat
    ```
-Setup will check requirements so far and will install environment variables. It also concludes with instructions
-on the different methods of launching the app (eg. dev, user, test).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
