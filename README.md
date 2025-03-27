@@ -185,7 +185,7 @@ Use the **Github** website and desktop app to clone repository.
 
 Once the project is on your local computer, you must navigate from the root directory into the myapp folder via Command Prompt (CMD) in your IDE.
    ```sh
-   cd CP3540Winter2025-code/myapp
+   cd src/backend
    ```
 <br>
 

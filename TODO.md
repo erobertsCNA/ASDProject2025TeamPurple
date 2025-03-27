@@ -21,6 +21,7 @@ This is more so a construction zone for our contributors. This can be a common p
   - [x] Create LICENSE
 - [x] Research next steps to bring functionality up to date with Paul's code.
 - [ ] Implement code update to class standard
+  - [x] Correct directory architecture
 - [ ] Individualize (reference architecture documents)
 
 ## Ral’s Tasks
