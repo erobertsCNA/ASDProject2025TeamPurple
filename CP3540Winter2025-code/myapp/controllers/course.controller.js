@@ -1,5 +1,4 @@
-const Course = require ("../models/course.model.js");
-
+'const Course = require ("../models/course.model.js");'
 // Insert a record
 const createCourse = async (req, res) => {
     // The browser uses the GET method to send any message, so
