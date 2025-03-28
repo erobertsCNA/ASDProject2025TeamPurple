@@ -9,15 +9,24 @@ if %errorlevel% neq 0 (
 )
 echo [SUCCESS] Node.js is installed!
 
-:: Step 2: Ask for MongoDB connection string, database name, and port number
+:: Step 2: Ask for MongoDB connection string and database name
 set /p MONGO_URI=Enter your MongoDB connection string:
 set /p DB_NAME=Enter your database name:
-set /p PORT=Enter the port number for your app (default: 3000):
 
-:: Use default port 3000 if left blank
-if "%PORT%"=="" set PORT=3000
+:: Step 3: Ask for a port, ensuring it's NOT 3000
+:ask_port
+set /p PORT=Enter the port number for your app (default: 5000, must not be 3000):
 
-:: Step 3: Create .env file with user-provided values
+:: Use default port 5000 if left blank
+if "%PORT%"=="" set PORT=5000
+
+:: Ensure port is NOT 3000
+if "%PORT%"=="3000" (
+    echo Port 3000 is reserved for React. Please choose another port.
+    goto ask_port
+)
+
+:: Step 4: Create .env file with user-provided values
 (
     echo MONGO_URI=%MONGO_URI%
     echo DB_NAME=%DB_NAME%
@@ -26,7 +35,7 @@ if "%PORT%"=="" set PORT=3000
 
 echo .env file created successfully!
 
-:: Step 4: Install dependencies from package.json
+:: Step 5: Install dependencies from package.json
 echo Installing dependencies...
 call npm install
 echo.

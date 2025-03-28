@@ -13,10 +13,13 @@ echo "[SUCCESS] Node.js is installed!"
 # Step 2: Ask for MongoDB connection string, database name, and port number
 read -p "Enter your MongoDB connection string: " MONGO_URI
 read -p "Enter your database name: " DB_NAME
-read -p "Enter the port number for your app (default: 3000): " PORT
+read -p "Enter the port number for your app (default: 5000, must not be 3000): " PORT
 
-# Use default port 3000 if left blank
-PORT=${PORT:-3000}
+# Ensure PORT is not 3000, and default to 5000 if empty or invalid
+if [[ -z "$PORT" || "$PORT" == "3000" ]]; then
+    PORT=5000
+    echo "Port set to default (5000) as 3000 is reserved for React."
+fi
 
 # Step 3: Create .env file with user-provided values
 cat <<EOF > .env
