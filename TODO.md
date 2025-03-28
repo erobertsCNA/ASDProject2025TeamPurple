@@ -47,3 +47,20 @@ This is more so a construction zone for our contributors. This can be a common p
 - [ ] Sample1
 - [ ] Sample2
 - [ ] Sample3
+
+--- March 28th deliverable post submission update [PLEASE READ] --- 
+
+For Marcus and Ral (who worked closely on the same stuff this week)
+
+This week's merge had a lot of overlap in work, specifically controllers. I've corrected some obvious errors but I don't
+have time to through all of the code. So for this week, go through the controllers (don't change my authController.js) 
+which contain both Marcus's and Ral's files. Merge them better and remove repeated methods.
+
+Also Marcus, fix volunteer.controller.js and its volunteer.js counterpart, they're both spelt wrong. I placed volunteer.js,
+ users.js, and resource.js in models as they are all mongoose models, not controllers. Update their name as well to match
+naming convention.
+
+For Nick,
+
+I have your react in here. I don't have time to even test it, but this week we can get react connected to backend.
+
