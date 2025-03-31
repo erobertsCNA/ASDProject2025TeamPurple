@@ -32,7 +32,18 @@ This is more so a construction zone for our contributors. This can be a common p
   - Using cors, frontend (react 3000) and backend (express 5000)
   - setup.bat now denies port 3000 as an input
   - setup.sh should do the same but is waiting for testing
+
+-[ ] Front to back
+  - [ ] Make sure you included in installation instructions that mongodb (or another nosql solution) 
+  - is installed and managed. 
+  - [ ]Run react
+  - [ ]Check front and back connections
+  - [ ]Test with postmans
  
+-[ ] ARCHITECTURE NOTES
+  - [ ] Eventual deployment, future AWS and Atlas Cloud hosting services for automation, scalability, and deployment
+  - [ ] Look up gov grant for civic infrastructure you could pitch with idea.
+  - [ ] Now known examples of gov hosting services (esoltuions and govstack)
 ## Ral’s Tasks
 - [ ] Sample1
 - [ ] Sample2
