@@ -41,9 +41,10 @@ This is more so a construction zone for our contributors. This can be a common p
     - below backend requests are confirmed functional: /register , /login
     - below pages are confirmed functional: /register (i.e. RegisterPage.js), /login (i.e. RegisterPage.js)
 
-- [ ] Set up front end dependencies (package.json) and setup-client.bat
-  - Until then, 'npm install react-router-dom' is required to have active react routes.
-- [ ] Consider making interactive script to handle both.
+- [x] Set up front end dependencies in setup-client.bat
+  - Might be best keeping backend set up not with front end.
+- [ ] Consider making interactive script using console to handle both.
+  - Until then, in the backend, setup.bat, frontend, npm install
  
 -[ ] ARCHITECTURE NOTES
   - [ ] Eventual deployment, future AWS and Atlas Cloud hosting services for automation, scalability, and deployment
