@@ -1,60 +1,64 @@
-// src/pages/LoginPage.js
 import React, { useState } from 'react';
-import { loginUser } from '../utils/fetch'; // Importing the loginUser function
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { loginUser } from '../utils/fetch'; // Named import for loginUser
 
 const LoginPage = () => {
-    const [formData, setFormData] = useState({
-        email: '',
-        password: ''
-    });
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
+    const navigate = useNavigate(); // Initialize useNavigate
 
-    const [error, setError] = useState('');
-    const [isSubmitting, setIsSubmitting] = useState(false);
-
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData((prevData) => ({ ...prevData, [name]: value }));
-    };
-
-    const handleSubmit = async (e) => {
+    const handleLogin = async (e) => {
         e.preventDefault();
-        setIsSubmitting(true);
-        setError('');
+
+        const userData = { email, password };
 
         try {
-            const response = await loginUser(formData); // Using loginUser from fetch.jsx
-            alert(response.message); // Handle success
-            // Optionally, store user data or token in localStorage or state
-        } catch (err) {
-            setError(err.message); // Handle error
-        } finally {
-            setIsSubmitting(false);
+            // Make POST request to backend API using loginUser from utils
+            const response = await loginUser('/login', 'POST', userData);
+
+            if (response && response.message === "Login successful!") {
+                // Store the authentication token (use the token from the backend response)
+                localStorage.setItem('authToken', response.token); // Set the actual token from the response
+
+                // Navigate to dashboard after successful login
+                navigate('/dashboard');
+            } else {
+                setErrorMessage(response?.error || "Login failed.");
+            }
+        } catch (error) {
+            console.error("Error:", error);
+            setErrorMessage("An error occurred while logging in.");
         }
     };
 
     return (
         <div>
-            <h1>Login</h1>
-            {error && <p style={{ color: 'red' }}>{error}</p>}
-            <form onSubmit={handleSubmit}>
-                <input
-                    type="email"
-                    name="email"
-                    placeholder="Email"
-                    value={formData.email}
-                    onChange={handleChange}
-                />
-                <input
-                    type="password"
-                    name="password"
-                    placeholder="Password"
-                    value={formData.password}
-                    onChange={handleChange}
-                />
-                <button type="submit" disabled={isSubmitting}>
-                    {isSubmitting ? 'Logging in...' : 'Login'}
-                </button>
+            <h2>Login</h2>
+            <form onSubmit={handleLogin}>
+                <div>
+                    <label htmlFor="email">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                    />
+                </div>
+                <div>
+                    <label htmlFor="password">Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                    />
+                </div>
+                <button type="submit">Login</button>
             </form>
+            {errorMessage && <p>{errorMessage}</p>}
         </div>
     );
 };

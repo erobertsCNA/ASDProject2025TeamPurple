@@ -3,13 +3,18 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const jwt = require('jsonwebtoken');
 const User = require('./models/user.model'); // Import your existing User model
+const authMiddleware = require('./middleware/authMiddleware'); // Import auth middleware
 
 const app = express();
 const port = process.env.PORT || 3001;
 
 app.use(cors());
 app.use(express.json());
+
+// Note from Evan: The /register, /login, and /dashboard will eventually be moved to their homes
+// in controllers once Marcus and Ral are done correcting them.
 
 // Register Route
 app.post('/register', async (req, res) => {
@@ -62,13 +67,26 @@ app.post('/login', async (req, res) => {
             return res.status(401).json({ error: "Invalid credentials." });
         }
 
-        res.status(200).json({ message: "Login successful!", user: { firstName: user.firstName, lastName: user.lastName, email: user.email, role: user.userRole } });
+        // Generate JWT token
+        const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: "1h" });
+
+        res.status(200).json({
+            message: "Login successful!",
+            token, // Send token to frontend
+            user: { firstName: user.firstName, lastName: user.lastName, email: user.email, role: user.userRole }
+        });
     } catch (error) {
         console.error(error);
         res.status(500).json({ error: "Login failed." });
     }
 });
 
+// Protected Dashboard Route
+app.get('/dashboard', authMiddleware, (req, res) => {
+    res.json({ message: "Welcome to the dashboard!", userId: req.user.userId });
+});
+
+// Database Connection
 mongoose.connect(process.env.MONGO_URI, { dbName: process.env.DB_NAME })
     .then(() => {
         console.log("Connected to the database!");
