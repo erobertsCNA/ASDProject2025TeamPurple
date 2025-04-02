@@ -36,9 +36,14 @@ This is more so a construction zone for our contributors. This can be a common p
 -[ ] Front to back
   - [ ] Make sure you included in installation instructions that mongodb (or another nosql solution) 
   - is installed and managed. 
-  - [ ]Run react
-  - [ ]Check front and back connections
-  - [ ]Test with postmans
+  - [x] Run react
+  - [x] Check front and back connections
+    - below backend requests are confirmed functional: /register , /login
+    - below pages are confirmed functional: /register (i.e. RegisterPage.js), /login (i.e. RegisterPage.js)
+
+- [ ] Set up front end dependencies (package.json) and setup-client.bat
+  - Until then, 'npm install react-router-dom' is required to have active react routes.
+- [ ] Consider making interactive script to handle both.
  
 -[ ] ARCHITECTURE NOTES
   - [ ] Eventual deployment, future AWS and Atlas Cloud hosting services for automation, scalability, and deployment

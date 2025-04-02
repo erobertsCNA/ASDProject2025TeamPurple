@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import './App.css';
+import './styles/App.css';
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.<br />  
-          Hello is this working      
+          Front end is working!
         </p>
         <a
           className="App-link"
