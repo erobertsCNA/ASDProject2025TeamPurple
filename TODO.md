@@ -32,10 +32,12 @@ This is more so a construction zone for our contributors. This can be a common p
   - Using cors, frontend (react 3000) and backend (express 5000)
   - setup.bat now denies port 3000 as an input
   - setup.sh should do the same but is waiting for testing
+  - [x] Bug fix: if user decides not to run backend before installing frontend, frontend won't accidently end up on 5000
 
 -[ ] Front to back
   - [ ] Make sure you included in installation instructions that mongodb (or another nosql solution) 
-  - is installed and managed. 
+  - is installed and managed which includes connection string and database name. 
+    - Make sure to differentiate between local database and cloud (gets the proper url)
   - [x] Run react
   - [x] Check front and back connections
     - below backend requests are confirmed functional: /register , /login
@@ -45,11 +47,14 @@ This is more so a construction zone for our contributors. This can be a common p
   - Might be best keeping backend set up not with front end.
 - [ ] Consider making interactive script using console to handle both.
   - Until then, in the backend, setup.bat, frontend, npm install
+  - Consider having consoles automatically launch to the correct directory (if possible). 
+    - Example, Console1: ../backend and Console2: ../client
  
 -[ ] ARCHITECTURE NOTES
   - [ ] Eventual deployment, future AWS and Atlas Cloud hosting services for automation, scalability, and deployment
   - [ ] Look up gov grant for civic infrastructure you could pitch with idea.
-  - [ ] Now known examples of gov hosting services (esoltuions and govstack)
+  - [x] Known examples of gov hosting services (esoltuions and govstack)
+  
 ## Ral’s Tasks
 - [ ] Sample1
 - [ ] Sample2
