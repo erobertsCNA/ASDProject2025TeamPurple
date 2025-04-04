@@ -10,7 +10,13 @@ const authMiddleware = require('./middleware/authMiddleware'); // Import auth mi
 const app = express();
 const port = process.env.PORT || 3001;
 
-app.use(cors());
+app.use(cors({
+    origin: 'http://localhost:3000', // Frontend URL
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
+    allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
+    credentials: true, // Allow cookies (JWT)
+}));
+
 app.use(express.json());
 
 // Note from Evan: The /register, /login, and /dashboard will eventually be moved to their homes
@@ -69,6 +75,15 @@ app.post('/login', async (req, res) => {
 
         // Generate JWT token
         const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: "1h" });
+
+        const isProduction = process.env.NODE_ENV === "production"; // Check if you're in production
+
+        res.cookie("token", token, {
+            httpOnly: true,
+            secure: isProduction, // Use HTTPS only in production
+            sameSite: "Strict",
+            maxAge: 3600000  // 1 hour
+        });
 
         res.status(200).json({
             message: "Login successful!",

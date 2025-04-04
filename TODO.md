@@ -4,7 +4,17 @@ This is more so a construction zone for our contributors. This can be a common p
 - share ideas, 
 - avoid conflicting merges.
 
-## Evan's Tasks
+## Team Ral and Marcus (Things to do)
+- Following from previous conversation, here is the "things needing to be completed" short list, hopefully by April 11th, deliverable.
+- [ ] Ral and Marcus: organize and fix controllers under src/backend/controllers . The controllers folder currently holds code files submitted by both of you.
+There are some duplicates and redundant code. Remove duplicates and combine and upgrade code where necessary. Since the front and backend are set up, you can
+easily test the code as well, to ensure functionality.
+- [ ] Ral: You had some submissions for the April 4th deliverable, but your branch was cloned off main instead of 
+this week's dev branch, "April4thUpdate". Normally not a big deal but main is out of date and the project architecture has
+changed so significantly that I can't merge your changes in easily. For this week, just physically move the files into the correct
+folder and in the git update, just comment what happened.
+
+## Evan's Area
 - Last Updated: March 25th, 2025
 
 
@@ -55,20 +65,34 @@ This is more so a construction zone for our contributors. This can be a common p
   - [ ] Look up gov grant for civic infrastructure you could pitch with idea.
   - [x] Known examples of gov hosting services (esoltuions and govstack)
   
-## Ral’s Tasks
+## Ral’s Area
 - [ ] Sample1
 - [ ] Sample2
 - [ ] Sample3
 
-## Marcus’s Tasks
+## Marcus’s Area
 - [ ] Sample1
 - [ ] Sample2
 - [ ] Sample3
 
-## Nick’s Tasks
+## Nick’s Area
 - [ ] Sample1
 - [ ] Sample2
 - [ ] Sample3
+
+--- April 4th deliverable post submission update [PLEASE READ] ---
+
+I'm making this a recurring log for my own reference and possibly to format into a document later. I'll also include notes
+for us below, like how this week I was asked to report the following for reference:
+
+- Following from previous conversation, here is the "things needing to be completed" short list, hopefully by April 11th, deliverable.
+- [ ] Ral and Marcus: organize and fix controllers under src/backend/controllers . The controllers folder currently holds code files submitted by both of you.
+  There are some duplicates and redundant code. Remove duplicates and combine and upgrade code where necessary. Since the front and backend are set up, you can
+  easily test the code as well, to ensure functionality.
+- [ ] Ral: You had some submissions for the April 4th deliverable, but your branch was cloned off main instead of
+  this week's dev branch, "April4thUpdate". Normally not a big deal but main is out of date and the project architecture has
+  changed so significantly that I can't merge your changes in easily. For this week, just physically move the files into the correct
+  folder and in the git update, just comment what happened.
 
 --- March 28th deliverable post submission update [PLEASE READ] --- 
 

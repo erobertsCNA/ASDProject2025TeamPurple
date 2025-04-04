@@ -32,6 +32,7 @@ if "%PORT%"=="3000" (
     echo DB_NAME=%DB_NAME%
     echo PORT=%PORT%
     echo JWT_SECRET=yourSuperSecretKey
+    echo NODE_ENV=development  # Change to 'production' in production environment
 ) > .env
 
 echo .env file created successfully!

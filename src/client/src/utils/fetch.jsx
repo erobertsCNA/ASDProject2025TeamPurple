@@ -17,6 +17,7 @@ export const registerUser = async (userData) => {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify(userData),
+        credentials: 'include', // Include cookies with the request
     });
     return handleResponse(response);
 };
@@ -29,23 +30,16 @@ export const loginUser = async (url, method, credentials) => {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify(credentials),  // credentials (email, password)
+        credentials: 'include', // Include cookies with the request
     });
     return handleResponse(response);
 };
 
 // User Dashboard (protected)
 export const getDashboardData = async () => {
-    const token = localStorage.getItem('authToken'); // Get the token
-
-    if (!token) {
-        throw new Error('No token found, please login.');
-    }
-
     const response = await fetch(`${API_URL}/dashboard`, {
         method: 'GET',
-        headers: {
-            'Authorization': `Bearer ${token}`, // Send token in Authorization header
-        },
+        credentials: 'include', // Include cookies with the request
     });
 
     if (!response.ok) {
