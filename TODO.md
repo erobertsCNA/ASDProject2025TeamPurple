@@ -15,7 +15,7 @@ changed so significantly that I can't merge your changes in easily. For this wee
 folder and in the git update, just comment what happened.
 
 ## Evan's Area
-- Last Updated: March 25th, 2025
+- Last Updated: April 8th, 2025
 
 
 - [x] Complete `README.md`
@@ -25,7 +25,7 @@ folder and in the git update, just comment what happened.
   - [x] Confirm and write installation instructions
   - [x] Replace Roadmap with Use Cases
   - [ ] Fill in Use Cases
-    - [ ] Use Case 1
+    - [x] Use Case 1
     - [ ] Use Case 2
     - [ ] Use Case 3
   - [x] Create LICENSE
@@ -45,7 +45,7 @@ folder and in the git update, just comment what happened.
   - [x] Bug fix: if user decides not to run backend before installing frontend, frontend won't accidently end up on 5000
 
 -[ ] Front to back
-  - [ ] Make sure you included in installation instructions that mongodb (or another nosql solution) 
+  - [x] Make sure you included in installation instructions that mongodb (or another nosql solution) 
   - is installed and managed which includes connection string and database name. 
     - Make sure to differentiate between local database and cloud (gets the proper url)
   - [x] Run react
