@@ -1,0 +1,2 @@
+// When /login redirects to /dashboard it should make a logical choice depending on what type of user
+// successfully logs in. If it's admin, redirect to ManagerDashboardPage if reg user, DashboardPage
