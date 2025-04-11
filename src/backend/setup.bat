@@ -45,5 +45,4 @@ echo ==================================
 echo Setup complete! You can now run:
 echo   npm run dev  (for nodemon)
 echo   npm start    (for normal node)
-echo   npm test     (to test dependencies by running hello.js)
 echo ==================================

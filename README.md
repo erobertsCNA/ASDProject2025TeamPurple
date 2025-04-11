@@ -137,21 +137,41 @@
 
 ### Prerequisites
 While our instructions explain how to launch the app on your local machine, we do assume the following is installed and functioning.
-1. **Github**. 
+
+<br>
+
+1. **Git and Github**. 
 
 The ability to clone (or fork) this repository.
-2. **IDE**. 
 
-Any IDE is fine but we use IntelliJ.
-3. **Node.js**. 
+<br>
+
+2. **Node.js**.
 
 This can be installed from https://nodejs.org/
 Below are the instructions to set up the app on your local machine.
 
+<br>
+
+3. **NoSQL Database Solution**.
+
+You may use which ever NoSQL database solution you would like.
+
+We will be using MongoDB as our NoSQL database, https://www.mongodb.com/.
+
+<br>
+
+4. **Integrated Development Environment (IDE)**. 
+
+Any IDE is fine, but we use Intellij, Webstorm, or VSCode. This isn't required but highly recommended.
+
+<br>
+
 ## Installation
 
 Below are the instructions to deploy this app on your local machine. They differ by operating system,
-so please be cognisant of this when you follow the installation instructions.
+so please be aware of this when you follow the installation instructions. If you make a mistake,
+just run the instructions again.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -159,7 +179,7 @@ so please be cognisant of this when you follow the installation instructions.
 
 <br>
 
-#### 1. Clone the Repository
+## 1. Clone the Repository
 
 <br>
 
@@ -181,15 +201,19 @@ Use the **Github** website and desktop app to clone repository.
 
 <br>
 
-#### 2. Navigate to the directory.
+## 2. Navigate to the directory.
 
-Once the project is on your local computer, you must navigate from the root directory into the myapp folder via Command Prompt (CMD) in your IDE.
+Open your first terminal and navigate to the backend directory:
    ```sh
    cd src/backend
    ```
 <br>
 
-#### 3. Set up and install the Environment.
+## 3. Launching the Backend
+
+### 3.1. Set up and install the Environment.
+
+See instructions for Windows Users and Mac/Linux users below
 
 Setup will:
 
@@ -197,9 +221,9 @@ Setup will:
 - asks for Database specifics (DBURL, DBNAME, and PORT),
 - and concludes with instructions on the different methods of launching the app (eg. dev, user, test).
 
-See instructions for Windows Users and Mac/Linux users below
+<br>
 
-## Windows Users
+### 3.1.1. Windows Users
 In your CMD terminal, run the following:
    ```
    setup.bat
@@ -207,7 +231,7 @@ In your CMD terminal, run the following:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Mac or Linux Users:
+### 3.1.2. Mac or Linux Users:
 
 In your terminal, run the following:
 
@@ -215,13 +239,75 @@ In your terminal, run the following:
    chmod +x setup.sh && ./setup.sh
 
    ```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### 3.2. Launch the Backend:
 
-Setup will check requirements so far and will install environment variables. It also concludes with instructions
-on the different methods of launching the app (eg. dev, user, test).
+Once setup is complete, run one of the following:
+
+<br>
+
+**Option A - nodemon:**
+
+   ```
+   npm run dev
+
+   ```
+This command launches the backend with nodemon.
+
+<br>
+
+**Option B - node:**
+
+   ```
+   npm start
+
+   ```
+This command launches the backend with node.
+
+<br>
+
+## 4. Launching the Frontend:
+
+<br>
+
+Launching the frontend is much simpler. 
+
+<br>
+
+### 4.1. Open a new Terminal and Navigate:
+
+Open a new terminal and navigate to the frontend directory:
+
+   ```sh
+   cd src/client
+   ```
+<br>
+
+Then run the following to install dependencies:
+
+   ```sh
+   npm install
+   ```
+<br>
+
+Then run the following to launch the Frontend:
+
+   ```sh
+   npm start
+   ```
+<br>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### Project Successfully Launched!
+
+React should launch the localhost to your web browser. If you have any issues,
+you can always repeat the installation instructions.
+
+Make sure to gracefully exit the terminals with CTRL + C to avoid port errors.
+
+<br>
 
 <!-- TTD Fill in when examples exist -->
 ## Usage
@@ -242,6 +328,8 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Use Case 1:
+
+![Use Case Diagram](images/usecase1.png)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

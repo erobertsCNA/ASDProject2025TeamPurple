@@ -10,6 +10,7 @@ const DashboardPage = () => {
         const fetchData = async () => {
             try {
                 const response = await getDashboardData(); // API call to get data
+                console.log("Dashboard response:", response); // <-- add this
                 setDashboardData(response); // Set data to state
             } catch (err) {
                 setError('Failed to fetch dashboard data');
