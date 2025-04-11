@@ -17,6 +17,10 @@ folder and in the git update, just comment what happened.
 ## Evan's Area
 - Last Updated: April 8th, 2025
 
+## Completed Work
+
+<details>
+  <summary> Complete README.md </summary>
 
 - [x] Complete `README.md`
   - [x] Update Usage screenshots and images (waiting on development)
@@ -34,6 +38,11 @@ folder and in the git update, just comment what happened.
   - [x] Correct directory architecture
 - [x] Individualize (reference architecture documents)
 
+</details>
+
+<details>
+  <summary> Implement bcrypt </summary>
+
 - [x] Implement bcrypt
   - [x] Create files in appropriate architecture
   - [x] Implement bcrypt hashing and password validation
@@ -43,6 +52,12 @@ folder and in the git update, just comment what happened.
   - setup.bat now denies port 3000 as an input
   - setup.sh should do the same but is waiting for testing
   - [x] Bug fix: if user decides not to run backend before installing frontend, frontend won't accidently end up on 5000
+
+</details>
+
+
+<details>
+  <summary> Frontend to backend connections </summary>
 
 -[x] Front to back
   - [x] Make sure you included in installation instructions that mongodb (or another nosql solution) 
@@ -65,6 +80,11 @@ folder and in the git update, just comment what happened.
         - The deployment for the user should be hosted webapp so there isn't any need for a streamlined installation
         - Especially since the Python addition would potentially complicate and time waste.
  
+</details>
+
+## Incomplete Work
+
+### Further backend logic work
 - [ ] Further backend logic work:
   - [ ] All backend logic files exist (post controller and model clean up), which includes:
     - [ ] Volunteer board
@@ -85,6 +105,17 @@ folder and in the git update, just comment what happened.
   - [ ] All pages include basic logic and presentation
   - [ ] Tested to ensure functionality
 
+### Further Security Work
+Further security work
+- [ ] JWT is being stored locally and accessed that way. The cookie is being created but not used appropriately. 
+- [ ] userRole is passed WITH the JWT not IN the JWT. Could be security risk. Can pass in cookie but would require
+front end to decode cookie, and either
+  -  a) use id to query userRole and use that, or
+  -  b) store userRole in the cookie and pull that.
+- Both are time consuming but possibly required.
+
+
+### Architecture notes (future updates)
 -[ ] ARCHITECTURE NOTES
   - [ ] Eventual deployment, future AWS and Atlas Cloud hosting services for automation, scalability, and deployment
   - [x] Known examples of gov hosting services (esoltuions and govstack)
