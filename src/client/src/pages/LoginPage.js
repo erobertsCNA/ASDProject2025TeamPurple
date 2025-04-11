@@ -17,14 +17,19 @@ const LoginPage = () => {
         try {
             // Make POST request to backend API using loginUser from utils
             const response = await loginUser('/login', 'POST', userData);
+            console.log("Login response:", response);
 
             if (response && response.message === "Login successful!") {
-                // Store the authentication token (use the token from the backend response)
-                localStorage.setItem('authToken', response.token); // Set the actual token from the response
+                localStorage.setItem('authToken', response.token);
+                localStorage.setItem('userRole', response.userRole);
 
-                // Navigate to dashboard after successful login
-                navigate('/dashboard');
-            } else {
+                if (response.userRole === 'admin') {
+                    navigate('/admindashboard');
+                } else {
+                    navigate('/dashboard');
+                }
+            }
+            else {
                 setErrorMessage(response?.error || "Login failed.");
             }
         } catch (error) {

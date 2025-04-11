@@ -305,6 +305,8 @@ Then run the following to launch the Frontend:
 React should launch the localhost to your web browser. If you have any issues,
 you can always repeat the installation instructions.
 
+Make sure to gracefully exit the terminals with CTRL + C to avoid port errors.
+
 <br>
 
 <!-- TTD Fill in when examples exist -->

@@ -1,2 +1,13 @@
-// When /login redirects to /dashboard it should make a logical choice depending on what type of user
-// successfully logs in. If it's admin, redirect to ManagerDashboardPage if reg user, DashboardPage
+// ManagerDashboardPage.js
+import React from 'react';
+
+const ManagerDashboardPage = () => {
+    return (
+        <div>
+            <h1>Hello, Manager Dashboard!</h1>
+            <p>Welcome to the admin dashboard.</p>
+        </div>
+    );
+};
+
+export default ManagerDashboardPage;

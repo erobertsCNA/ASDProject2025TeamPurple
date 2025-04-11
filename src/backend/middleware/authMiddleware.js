@@ -1,7 +1,6 @@
 const jwt = require("jsonwebtoken");
 
 const authMiddleware = (req, res, next) => {
-    // Extract token from cookies
     const token = req.cookies.token;
 
     if (!token) {
@@ -9,11 +8,15 @@ const authMiddleware = (req, res, next) => {
     }
 
     try {
-        // Verify the token
-        const verified = jwt.verify(token, process.env.JWT_SECRET);
-        req.user = verified;  // Attach user info to request object
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
+        req.user = {
+            userId: decoded.userId,
+        };
+
         next();
     } catch (error) {
+        console.error("Auth error:", error);
         res.status(403).json({ message: "Invalid token." });
     }
 };
