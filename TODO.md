@@ -15,17 +15,21 @@ changed so significantly that I can't merge your changes in easily. For this wee
 folder and in the git update, just comment what happened.
 
 ## Evan's Area
-- Last Updated: March 25th, 2025
+- Last Updated: April 8th, 2025
 
+## Completed Work
+
+<details>
+  <summary> Complete README.md </summary>
 
 - [x] Complete `README.md`
-  - [ ] Update Usage screenshots and images (waiting on development)
+  - [x] Update Usage screenshots and images (waiting on development)
   - [x] Add installation script for Mac/Linux
   - [ ] Test setup.sh 
   - [x] Confirm and write installation instructions
   - [x] Replace Roadmap with Use Cases
-  - [ ] Fill in Use Cases
-    - [ ] Use Case 1
+  - [x] Fill in Use Cases
+    - [x] Use Case 1
     - [ ] Use Case 2
     - [ ] Use Case 3
   - [x] Create LICENSE
@@ -33,6 +37,11 @@ folder and in the git update, just comment what happened.
 - [x] Implement code update to class standard (once March 28th deliverable is merged successfully)
   - [x] Correct directory architecture
 - [x] Individualize (reference architecture documents)
+
+</details>
+
+<details>
+  <summary> Implement bcrypt </summary>
 
 - [x] Implement bcrypt
   - [x] Create files in appropriate architecture
@@ -44,8 +53,14 @@ folder and in the git update, just comment what happened.
   - setup.sh should do the same but is waiting for testing
   - [x] Bug fix: if user decides not to run backend before installing frontend, frontend won't accidently end up on 5000
 
--[ ] Front to back
-  - [ ] Make sure you included in installation instructions that mongodb (or another nosql solution) 
+</details>
+
+
+<details>
+  <summary> Frontend to backend connections </summary>
+
+-[x] Front to back
+  - [x] Make sure you included in installation instructions that mongodb (or another nosql solution) 
   - is installed and managed which includes connection string and database name. 
     - Make sure to differentiate between local database and cloud (gets the proper url)
   - [x] Run react
@@ -55,14 +70,54 @@ folder and in the git update, just comment what happened.
 
 - [x] Set up front end dependencies in setup-client.bat
   - Might be best keeping backend set up not with front end.
-- [ ] Consider making interactive script using console to handle both.
+- [x] Consider making interactive script using console to handle both.
   - Until then, in the backend, setup.bat, frontend, npm install
   - Consider having consoles automatically launch to the correct directory (if possible). 
     - Example, Console1: ../backend and Console2: ../client
+    - CONCLUSION: Python would be best to handle multiple scripts and handling to overcome OS choice issue.
+      - However, this would then require Python (or Python3) to be installed and working (added to PATH)
+        - Since this is intended for developers, there isn't much point in dumping tons of time into a new script.
+        - The deployment for the user should be hosted webapp so there isn't any need for a streamlined installation
+        - Especially since the Python addition would potentially complicate and time waste.
  
+</details>
+
+## Incomplete Work
+
+### Further backend logic work
+- [ ] Further backend logic work:
+  - [ ] All backend logic files exist (post controller and model clean up), which includes:
+    - [ ] Volunteer board
+      - [ ] Including postings, interaction counters, etc. All communication information would be in user/manager dashboard
+    - [ ] resource pages (simple pages, including text, images, links, etc.)
+      - Refer to list. There are tons.
+    - [ ] manager dashboard
+      - manages user profiles
+        - Individual reviews, experiences (how many they have completed)
+      - manages volunteer opportunity advertisements
+    - [ ] user dashboard
+    - [ ] maps page
+      - [ ] simple google maps implementation
+      - [ ] reference to advanced map site (for st. john's)
+    - [ ] street camera page
+- [ ] Further frontend presentation work:
+  - [ ] All appropriate pages exists
+  - [ ] All pages include basic logic and presentation
+  - [ ] Tested to ensure functionality
+
+### Further Security Work
+Further security work
+- [ ] JWT is being stored locally and accessed that way. The cookie is being created but not used appropriately. 
+- [ ] userRole is passed WITH the JWT not IN the JWT. Could be security risk. Can pass in cookie but would require
+front end to decode cookie, and either
+  -  a) use id to query userRole and use that, or
+  -  b) store userRole in the cookie and pull that.
+- Both are time consuming but possibly required.
+
+
+### Architecture notes (future updates)
 -[ ] ARCHITECTURE NOTES
   - [ ] Eventual deployment, future AWS and Atlas Cloud hosting services for automation, scalability, and deployment
-  - [ ] Look up gov grant for civic infrastructure you could pitch with idea.
   - [x] Known examples of gov hosting services (esoltuions and govstack)
   
 ## Ral’s Area

@@ -6,9 +6,12 @@ const cors = require('cors');
 const jwt = require('jsonwebtoken');
 const User = require('./models/user.model'); // Import your existing User model
 const authMiddleware = require('./middleware/authMiddleware'); // Import auth middleware
+const cookieParser = require("cookie-parser");
 
 const app = express();
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 5000;
+
+app.use(cookieParser());
 
 app.use(cors({
     origin: 'http://localhost:3000', // Frontend URL
@@ -74,7 +77,11 @@ app.post('/login', async (req, res) => {
         }
 
         // Generate JWT token
-        const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: "1h" });
+        const token = jwt.sign(
+            { userId: user._id},
+            process.env.JWT_SECRET,
+            { expiresIn: "1h" }
+        );
 
         const isProduction = process.env.NODE_ENV === "production"; // Check if you're in production
 
@@ -88,6 +95,7 @@ app.post('/login', async (req, res) => {
         res.status(200).json({
             message: "Login successful!",
             token, // Send token to frontend
+            userRole: user.userRole, // Send userRole alongside the token
             user: { firstName: user.firstName, lastName: user.lastName, email: user.email, role: user.userRole }
         });
     } catch (error) {
@@ -112,3 +120,12 @@ mongoose.connect(process.env.MONGO_URI, { dbName: process.env.DB_NAME })
     .catch(() => {
         console.log("Failed to connect to the database.");
     });
+
+// Protected Admin Dashboard Route
+app.get('/admindashboard', authMiddleware, (req, res) => {
+    if (req.user.userRole !== 'admin') {
+        return res.status(403).json({ message: "Access denied: Admins only." });
+    }
+
+    res.json({ message: "Welcome to the admin dashboard!", userId: req.user.userId });
+});
