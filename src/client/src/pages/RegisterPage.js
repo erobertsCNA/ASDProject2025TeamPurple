@@ -1,11 +1,9 @@
-// src/pages/RegisterPage.js
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
-import { registerUser } from '../utils/fetch'; // Importing the registerUser function
-import '../styles/RegisterPage.css'; // Import the CSS for styling
+import { useNavigate } from 'react-router-dom';
+import { registerUser } from '../utils/fetch';
 
 const RegisterPage = () => {
-    const navigate = useNavigate(); // Hook to navigate programmatically
+    const navigate = useNavigate();
 
     const [formData, setFormData] = useState({
         firstName: '',
@@ -30,7 +28,7 @@ const RegisterPage = () => {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFormData((prevData) => ({ ...prevData, [name]: value }));
+        setFormData(prev => ({ ...prev, [name]: value }));
     };
 
     const handleSubmit = async (e) => {
@@ -39,145 +37,43 @@ const RegisterPage = () => {
         setError('');
 
         try {
-            const response = await registerUser(formData); // Using registerUser from fetch.jsx
-            alert(response.message); // Handle success
-            navigate('/login'); // Redirect to login page after successful registration
+            const response = await registerUser(formData);
+            alert(response.message);
+            navigate('/login');
         } catch (err) {
-            setError(err.message); // Handle error
+            setError(err.message || 'Registration failed.');
         } finally {
             setIsSubmitting(false);
         }
     };
 
     return (
-        <div className="registerPageContainer">
-            <div className="registerContainer">
-                <h1>Register</h1>
-                {error && <p className="errorMessage">{error}</p>}
+        <div className="flex justify-center items-center min-h-screen bg-gray-100 py-12 px-4">
+            <div className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-2xl max-h-[90vh] overflow-y-auto">
+                <h2 className="text-2xl font-semibold text-center mb-6">Register</h2>
+                {error && <p className="text-red-500 text-sm mb-4 text-center">{error}</p>}
                 <form onSubmit={handleSubmit}>
-                    <div className="formGrid">
-                        <input
-                            type="text"
-                            name="firstName"
-                            placeholder="First Name"
-                            value={formData.firstName}
-                            onChange={handleChange}
-                            className="inputField"
-                        />
-                        <input
-                            type="text"
-                            name="lastName"
-                            placeholder="Last Name"
-                            value={formData.lastName}
-                            onChange={handleChange}
-                            className="inputField"
-                        />
-                        <input
-                            type="date"
-                            name="dob"
-                            placeholder="Date of Birth"
-                            value={formData.dob}
-                            onChange={handleChange}
-                            className="inputField"
-                        />
-                        <input
-                            type="text"
-                            name="addressUnit"
-                            placeholder="Address Unit"
-                            value={formData.addressUnit}
-                            onChange={handleChange}
-                            className="inputField"
-                        />
-                        <input
-                            type="text"
-                            name="addressStreet"
-                            placeholder="Address Street"
-                            value={formData.addressStreet}
-                            onChange={handleChange}
-                            className="inputField"
-                        />
-                        <input
-                            type="text"
-                            name="addressCity"
-                            placeholder="City"
-                            value={formData.addressCity}
-                            onChange={handleChange}
-                            className="inputField"
-                        />
-                        <input
-                            type="text"
-                            name="addressStateProv"
-                            placeholder="State/Province"
-                            value={formData.addressStateProv}
-                            onChange={handleChange}
-                            className="inputField"
-                        />
-                        <input
-                            type="text"
-                            name="addressCountry"
-                            placeholder="Country"
-                            value={formData.addressCountry}
-                            onChange={handleChange}
-                            className="inputField"
-                        />
-                        <input
-                            type="text"
-                            name="addressPostCode"
-                            placeholder="Postal Code"
-                            value={formData.addressPostCode}
-                            onChange={handleChange}
-                            className="inputField"
-                        />
-                        <input
-                            type="text"
-                            name="phone"
-                            placeholder="Phone"
-                            value={formData.phone}
-                            onChange={handleChange}
-                            className="inputField"
-                        />
-                        <input
-                            type="email"
-                            name="email"
-                            placeholder="Email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            className="inputField"
-                        />
-                        <input
-                            type="password"
-                            name="password"
-                            placeholder="Password"
-                            value={formData.password}
-                            onChange={handleChange}
-                            className="inputField"
-                        />
-                        <input
-                            type="text"
-                            name="emergContactName"
-                            placeholder="Emergency Contact Name"
-                            value={formData.emergContactName}
-                            onChange={handleChange}
-                            className="inputField"
-                        />
-                        <input
-                            type="text"
-                            name="emergContactPhone"
-                            placeholder="Emergency Contact Phone"
-                            value={formData.emergContactPhone}
-                            onChange={handleChange}
-                            className="inputField"
-                        />
-                        <input
-                            type="text"
-                            name="emergContactRel"
-                            placeholder="Emergency Contact Relationship"
-                            value={formData.emergContactRel}
-                            onChange={handleChange}
-                            className="inputField"
-                        />
+                    <div className="grid grid-cols-1 gap-4 mb-6">
+                        {Object.entries(formData).map(([key, value]) => (
+                            <div key={key}>
+                                <label className="block text-sm font-medium text-gray-700">
+                                    {key.replace(/([A-Z])/g, ' $1')}
+                                </label>
+                                <input
+                                    type={key === 'dob' ? 'date' : key === 'email' ? 'email' : key === 'password' ? 'password' : 'text'}
+                                    name={key}
+                                    value={value}
+                                    onChange={handleChange}
+                                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                />
+                            </div>
+                        ))}
                     </div>
-                    <button type="submit" className="submitButton" disabled={isSubmitting}>
+                    <button
+                        type="submit"
+                        className="w-full py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
+                        disabled={isSubmitting}
+                    >
                         {isSubmitting ? 'Registering...' : 'Register'}
                     </button>
                 </form>

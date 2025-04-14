@@ -15,13 +15,13 @@ set /p DB_NAME=Enter your database name:
 
 :: Step 3: Ask for a port, ensuring it's NOT 3000
 :ask_port
-set /p PORT=Enter the port number for your app (default: 5000, must not be 3000):
+set /p BACKPORT=Enter the port number for your app (default: 5000, must not be 3000):
 
 :: Use default port 5000 if left blank
-if "%PORT%"=="" set PORT=5000
+if "%BACKPORT%"=="" set BACKPORT=5000
 
 :: Ensure port is NOT 3000
-if "%PORT%"=="3000" (
+if "%BACKPORT%"=="3000" (
     echo Port 3000 is reserved for React. Please choose another port.
     goto ask_port
 )
@@ -30,7 +30,7 @@ if "%PORT%"=="3000" (
 (
     echo MONGO_URI=%MONGO_URI%
     echo DB_NAME=%DB_NAME%
-    echo PORT=%PORT%
+    echo BACKPORT=%BACKPORT%
     echo JWT_SECRET=yourSuperSecretKey
     echo NODE_ENV=development  # Change to 'production' in production environment
 ) > .env

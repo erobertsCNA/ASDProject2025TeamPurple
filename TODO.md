@@ -84,6 +84,12 @@ folder and in the git update, just comment what happened.
 
 ## Incomplete Work
 
+### Routing work
+
+- [ ] I went ahead and started to clean up controllers and models and found we have a routing error. Since testing was 
+never completed, we have yet to successfully set up and test the routes and models. Therefore, its nothing more then
+stock code. As of now, the only working end points live in app.js in the backend. This will be moved once this is corrected.
+
 ### Further backend logic work
 - [ ] Further backend logic work:
   - [ ] All backend logic files exist (post controller and model clean up), which includes:
