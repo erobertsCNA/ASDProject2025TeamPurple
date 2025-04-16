@@ -1,18 +1,5 @@
 const User = require("../models/user.model.js");
 
-// Insert a record
-const createUser = async (req, res) => {
-    console.log("Trying to create a user");
-    console.log(req.body);
-    try {
-        const user = await User.create(req.body);
-        res.status(200).json(user);
-    }
-    catch (error) {
-        res.status(500).json({ message: error.message });
-    }
-};
-
 // Retrieve ALL records
 const getAllUsers = async (req, res) => {
     try {
@@ -128,15 +115,40 @@ const deleteAllUsers = async (req, res) => {
 };
 
 // Delete a record by Id
-const deleteUserById = async (req, res) => {
+
+const deleteUserController = async (req, res) => {
     try {
-        const user = await User.findByIdAndDelete(req.params.id);
-        res.status(200).json(user);
-    }
-    catch (err) {
-        res.status(500).json({ message: err.message});
+        const user = await User.findOneAndDelete({ userId: req.params.id });
+        if (!user) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+        res.json({ message: 'User deleted successfully' });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Server error' });
     }
 };
+
+const updateUserRole = async (req, res) => {
+    const { id } = req.params;
+    const { userRole } = req.body;
+
+    try {
+        const user = await User.findByIdAndUpdate(
+            id,
+            { userRole },
+            { new: true }
+        );
+        if (!user) {
+            return res.status(404).json({ success: false, message: "User not found" });
+        }
+        res.json({ success: true, message: "Role updated", user });
+    } catch (err) {
+        console.error("Error updating role:", err);
+        res.status(500).json({ success: false, message: "Server error" });
+    }
+};
+
 
 // Delete a record by email
 const deleteUserByEmail = async (req, res) => {
@@ -171,8 +183,10 @@ const deleteAllUsersByLastName = async (req, res) => {
     }
 };
 
+
 module.exports = {
-    createUser,
+    updateUserRole,
+    deleteUserController,
     getAllUsers,
     getUserById,
     getUserByEmail,
@@ -183,7 +197,6 @@ module.exports = {
     updateFirstUserByFirstLastName,
     updateAllUsersByLastName,
     deleteAllUsers,
-    deleteUserById,
     deleteUserByEmail,
     deleteFirstUserByFirstLastName,
     deleteAllUsersByLastName  

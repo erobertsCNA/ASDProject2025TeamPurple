@@ -9,6 +9,15 @@ const handleResponse = async (response) => {
     return response.json();
 };
 
+// Fetch all users (for manager dashboard)
+export const getAllUsers = async () => {
+    const response = await fetch(`${API_URL}/users`, {
+        method: 'GET',
+        credentials: 'include', // to include the cookie with JWT
+    });
+    return handleResponse(response);
+};
+
 // Register User
 export const registerUser = async (userData) => {
     const response = await fetch(`${API_URL}/register`, {
@@ -48,4 +57,45 @@ export const getDashboardData = async () => {
     }
 
     return await response.json(); // Return response data
+};
+
+export const deleteUser = async (userId) => {
+    try {
+        const response = await fetch(`http://localhost:5000/users/${userId}`, {
+            method: 'DELETE',
+            credentials: 'include', // if using cookies
+        });
+
+        if (!response.ok) {
+            const errorText = await response.text(); // safely read HTML fallback
+            throw new Error(errorText);
+        }
+
+        const data = await response.json(); // should be safe now
+        return data;
+    } catch (error) {
+        console.error("Error deleting user:", error);
+        throw error;
+    }
+};
+
+export const updateUserRole = async (userId, newRole) => {
+    try {
+        const response = await fetch(`http://localhost:5000/users/${userId}/role`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ userRole: newRole }),
+        });
+
+        if (!response.ok) {
+            throw new Error('Failed to update role');
+        }
+
+        return await response.json();
+    } catch (err) {
+        console.error("Error updating role:", err);
+        return { success: false, message: err.message };
+    }
 };

@@ -7,9 +7,10 @@ const jwt = require('jsonwebtoken');
 const User = require('./models/user.model'); // Import your existing User model
 const authMiddleware = require('./middleware/authMiddleware'); // Import auth middleware
 const cookieParser = require("cookie-parser");
+const userRoutes = require('./routers/userRoute');
 
 const app = express();
-const port = process.env.PORT || 5000;
+const backport = process.env.BACKPORT || 5000;
 
 app.use(cookieParser());
 
@@ -21,9 +22,8 @@ app.use(cors({
 }));
 
 app.use(express.json());
+app.use('/', require('./routers/userRoute'));
 
-// Note from Evan: The /register, /login, and /dashboard will eventually be moved to their homes
-// in controllers once Marcus and Ral are done correcting them.
 
 // Register Route
 app.post('/register', async (req, res) => {
@@ -113,8 +113,8 @@ app.get('/dashboard', authMiddleware, (req, res) => {
 mongoose.connect(process.env.MONGO_URI, { dbName: process.env.DB_NAME })
     .then(() => {
         console.log("Connected to the database!");
-        app.listen(port, () => {
-            console.log(`Server running on port ${port}`);
+        app.listen(backport, () => {
+            console.log(`Server running on port ${backport}`);
         });
     })
     .catch(() => {
@@ -129,3 +129,80 @@ app.get('/admindashboard', authMiddleware, (req, res) => {
 
     res.json({ message: "Welcome to the admin dashboard!", userId: req.user.userId });
 });
+
+// Retrieve ALL records
+app.get('/users', async (req, res) => {
+    try {
+        const users = await User.find({});
+        res.status(200).json(users);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+});
+
+
+app.post('/users', async (req, res) => {
+    try {
+        const newUser = new User(req.body);
+        await newUser.save();
+        res.status(201).json({ message: "User created successfully!", user: newUser });
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+});
+
+// Update User Role Route (PATCH)
+app.patch('/users/:userId/role', async (req, res) => {
+    try {
+        const { userId } = req.params;
+        const { newRole } = req.body;
+
+        const user = await User.findOneAndUpdate(
+            { userId },
+            { userRole: newRole },
+            { new: true } // Return the updated user
+        );
+
+        if (!user) {
+            return res.status(404).json({ error: "User not found." });
+        }
+
+        res.status(200).json({
+            message: "User role updated successfully!",
+            user: { userId: user.userId, role: user.userRole }
+        });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: "Failed to update user role." });
+    }
+});
+
+// Delete User Route (DELETE)
+app.delete('/users/:userId', async (req, res) => {
+    try {
+        const { userId } = req.params;
+
+        const result = await User.findOneAndDelete({ userId });
+
+        if (!result) {
+            return res.status(404).json({ error: "User not found." });
+        }
+
+        res.status(200).json({ message: "User deleted successfully!" });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: "Failed to delete user." });
+    }
+});
+
+//dev endpoint only - remove once finished
+
+app.delete('/dev/wipe-users', async (req, res) => {
+    try {
+        await User.deleteMany({});
+        res.status(200).json({ message: "All users deleted" });
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+});
+
